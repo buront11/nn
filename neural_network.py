@@ -20,7 +20,7 @@ class NeuralNetwork(nn.Module):
 
         return x
 
-    def get_criterion():
+    def get_criterion(self):
         return nn.CrossEntropyLoss()
 
     def get_optimizer(self,lr=0.001,momentum=0.9):

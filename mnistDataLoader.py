@@ -1,3 +1,5 @@
+from config import *
+
 import torch
 from torch.utils import data
 import torchvision
@@ -15,7 +17,7 @@ trainset = torchvision.datasets.MNIST(root='./data',
                                         transform=transoform)
                                     
 trainloader = torch.utils.data.DataLoader(trainset,
-                                            batch_size=100,
+                                            batch_size=bacth_size,
                                             shuffle=True,
                                             num_workers=2)
 
@@ -25,7 +27,7 @@ testset = torchvision.datasets.MNIST(root='./data',
                                         transform=transoform)
 
 testloader = torch.utils.data.DataLoader(testset,
-                                            batch_size=100,
+                                            batch_size=bacth_size,
                                             shuffle=False,
                                             num_workers=2)
 
